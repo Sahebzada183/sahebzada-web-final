@@ -68,31 +68,22 @@
   <p id="message" style="color: red;"></p>
 </div>
 
-<!-- iFrame for Clipchamp (initially hidden) -->
-<iframe id="clipchampFrame" src="" style="display:none; width:100%; height:600px; border:none; margin-top:20px;"></iframe>
-
 <script>
   function askCode() {
     document.getElementById("codePrompt").style.display = "block";
   }
 
   function checkCode() {
-    const correctCode = "2025"; // ← آپ یہاں اپنا code لکھ سکتے ہیں
+    const correctCode = "2025"; // ← اپنا code یہاں change کریں
     const enteredCode = document.getElementById("codeInput").value;
     const message = document.getElementById("message");
-    const iframe = document.getElementById("clipchampFrame");
 
     if (enteredCode === correctCode) {
       message.textContent = "";
-      document.getElementById("codePrompt").style.display = "none";
-      iframe.src = "https://app.clipchamp.com/signup/SAHEBZADAANAYATULLAH";
-      iframe.style.display = "block";
+      // Same tab redirection
+      window.location.href = "https://app.clipchamp.com/signup/SAHEBZADAANAYATULLAH";
     } else {
       message.textContent = "❌ Incorrect code. Try again.";
     }
   }
 </script>
-  </a>
-
-</body>,
-</html>,
