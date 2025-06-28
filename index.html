@@ -5,62 +5,90 @@
   <title>Saheb Zada Anayatullah</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
-      background: #f9f9f9;
+      font-family: 'Segoe UI', sans-serif;
+      background: #f4f4f4;
       text-align: center;
-      padding: 60px 20px;
+      padding-top: 60px;
     }
 
     .profile-img {
       width: 280px;
       height: 280px;
-      object-fit: cover;
       border-radius: 50%;
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-      margin-bottom: 20px;
+      object-fit: cover;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+      margin-bottom: 25px;
     }
 
     h1 {
       font-size: 32px;
+      color: #2c3e50;
       margin-bottom: 10px;
-      color: #222;
-    }
-
-    p {
-      font-size: 18px;
-      color: #555;
-      margin-bottom: 30px;
     }
 
     .btn {
       background-color: #0078d7;
       color: white;
-      padding: 14px 30px;
+      padding: 12px 28px;
       font-size: 18px;
       border: none;
       border-radius: 8px;
-      text-decoration: none;
-      display: inline-block;
-      transition: background-color 0.3s ease;
+      cursor: pointer;
+      transition: background 0.3s;
     }
 
     .btn:hover {
       background-color: #005bb5;
     }
+
+    #codePrompt {
+      margin-top: 20px;
+      display: none;
+    }
+
+    #codePrompt input {
+      padding: 8px;
+      font-size: 16px;
+      width: 150px;
+      text-align: center;
+    }
+
+    #message {
+      margin-top: 10px;
+      color: red;
+    }
   </style>
 </head>
 <body>
 
-  <!-- 👇 Profile image you gave earlier -->
   <img src="profile.jpg" alt="Saheb Zada" class="profile-img">
-
   <h1>Saheb Zada Anayatullah</h1>
   <p>Welcome to my personal website!</p>
 
-  <!-- 👇 Button text: SAHEB ZADA | Link: Clipchamp -->
-  <a href="https://app.clipchamp.com/signup/SAHEBZADAANAYATULLAH" class="btn" target="_blank">
-    SAHEB ZADA
-  </a>
+  <button class="btn" onclick="askCode()">Access Clipchamp</button>
 
+  <div id="codePrompt">
+    <input type="text" id="codeInput" placeholder="Enter Code">
+    <button class="btn" onclick="checkCode()">Submit</button>
+    <div id="message"></div>
+  </div>
+
+  <script>
+    function askCode() {
+      document.getElementById("codePrompt").style.display = "block";
+    }
+
+    function checkCode() {
+      const correctCode = "2025";
+      const userCode = document.getElementById("codeInput").value;
+      const message = document.getElementById("message");
+
+      if (userCode === correctCode) {
+        window.open("https://app.clipchamp.com/signup/SAHEBZADAANAYATULLAH", "_blank");
+      } else {
+        message.textContent = "Incorrect code. Try again.";
+      }
+    }
+  </script>
 </body>
 </html>
