@@ -2,41 +2,37 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Saheb Zada Anayatullah</title>
+  <title>Saheb Zada</title>
   <style>
     body {
       font-family: 'Segoe UI', sans-serif;
       background-color: #f4f4f4;
       text-align: center;
-      padding-top: 60px;
+      padding-top: 50px;
     }
 
     .profile-img {
-      width: 280px;
-      height: 280px;
+      width: 300px;
+      height: 300px;
       border-radius: 50%;
       object-fit: cover;
       box-shadow: 0 4px 20px rgba(0,0,0,0.3);
-      margin-bottom: 25px;
-    }
-
-    h1 {
-      font-size: 32px;
-      color: #2c3e50;
-      margin-bottom: 10px;
+      margin-bottom: 30px;
     }
 
     .btn {
-      background-image: url('profile.jpg');
-      background-size: cover;
-      background-position: center;
-      width: 100px;
-      height: 100px;
+      background-color: #0078d7;
+      color: white;
+      padding: 14px 32px;
+      font-size: 20px;
       border: none;
-      border-radius: 50%;
+      border-radius: 10px;
       cursor: pointer;
-      display: inline-block;
-      margin-top: 20px;
+      transition: background-color 0.3s;
+    }
+
+    .btn:hover {
+      background-color: #005bb5;
     }
 
     #codePrompt {
@@ -45,9 +41,9 @@
     }
 
     #codePrompt input {
-      padding: 8px;
+      padding: 10px;
       font-size: 16px;
-      width: 150px;
+      width: 160px;
       text-align: center;
     }
 
@@ -74,11 +70,10 @@
 </head>
 <body>
 
-  <img src="profile.jpg" alt="Saheb Zada" class="profile-img">
-  <h1>Saheb Zada Anayatullah</h1>
-  <p>Welcome to my personal website!</p>
+  <!-- 🔗 Your image embedded directly (replace base64 if needed) -->
+  <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxISEhUTEhIVFhUVFhUWFxUVFRUVFhUVFRUXFhUVFRUYHSggGBolHRUVITEhJSkrLi4uFx8zODMtNygtLisBCgoKDg0OGxAQGy0lICUtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLf/AABEIAOEA4QMBIgACEQEDEQH/xAAbAAEAAQUBAAAAAAAAAAAAAAAABAIDBQYHAf/EADYQAAIBAwIEAwYEBwEAAAAAAAABAgMRBBIhMQVBUQYiYXGRobHwByNCUmLB4RQjM0NygqLxJDRDU5Ki/8QAGgEBAAMBAQEAAAAAAAAAAAAAAAIDBAEFBv/EAC8RAAICAQIEAwcFAQAAAAAAAAABAhEDBBIhMRMiQVFhBRRhcaHR4fAGscHxIzNigmL/2gAMAwEAAhEDEQA/APWiiigAooooAKKKKACiiigD/9k=" alt="Saheb Zada" class="profile-img">
 
-  <button class="btn" onclick="askCode()"></button>
+  <button class="btn" onclick="askCode()">SAHEB ZADA</button>
 
   <div id="codePrompt">
     <input type="text" id="codeInput" placeholder="Enter Code">
