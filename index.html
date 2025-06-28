@@ -6,7 +6,7 @@
   <style>
     body {
       font-family: 'Segoe UI', sans-serif;
-      background: #f4f4f4;
+      background-color: #f4f4f4;
       text-align: center;
       padding-top: 60px;
     }
@@ -27,18 +27,16 @@
     }
 
     .btn {
-      background-color: #0078d7;
-      color: white;
-      padding: 12px 28px;
-      font-size: 18px;
+      background-image: url('profile.jpg');
+      background-size: cover;
+      background-position: center;
+      width: 100px;
+      height: 100px;
       border: none;
-      border-radius: 8px;
+      border-radius: 50%;
       cursor: pointer;
-      transition: background 0.3s;
-    }
-
-    .btn:hover {
-      background-color: #005bb5;
+      display: inline-block;
+      margin-top: 20px;
     }
 
     #codePrompt {
@@ -53,6 +51,21 @@
       text-align: center;
     }
 
+    #submit-btn {
+      padding: 10px 22px;
+      font-size: 16px;
+      margin-left: 10px;
+      border: none;
+      border-radius: 5px;
+      background-color: #0078d7;
+      color: white;
+      cursor: pointer;
+    }
+
+    #submit-btn:hover {
+      background-color: #005bb5;
+    }
+
     #message {
       margin-top: 10px;
       color: red;
@@ -65,11 +78,11 @@
   <h1>Saheb Zada Anayatullah</h1>
   <p>Welcome to my personal website!</p>
 
-  <button class="btn" onclick="askCode()">Access Clipchamp</button>
+  <button class="btn" onclick="askCode()"></button>
 
   <div id="codePrompt">
     <input type="text" id="codeInput" placeholder="Enter Code">
-    <button class="btn" onclick="checkCode()">Submit</button>
+    <button id="submit-btn" onclick="checkCode()">Submit</button>
     <div id="message"></div>
   </div>
 
